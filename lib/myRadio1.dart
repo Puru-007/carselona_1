@@ -95,7 +95,7 @@ class MyStatefulWidget1State extends State<MyStatefulWidget1> {
   }
   @override
   Widget build(BuildContext context) {
-    return customRadioGroup(radioTitle);
+    return customRadioGroup(widget.titles);
   }
 
 }
