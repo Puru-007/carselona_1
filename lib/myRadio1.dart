@@ -71,18 +71,20 @@ class MyStatefulWidget1State extends State<MyStatefulWidget1> {
       //done
       child: Row(
 
-        children: radioTitle.map((titles) => Wrap(children: <Widget>[
+        children: radioTitle.map((titles) => Row(children: <Widget>[
 
           Radio(
             value: "$titles",
             groupValue: "$titles",
             onChanged: (value) {
               setState(() {
+
               });
             },
           ),
           Text(
             '$titles',
+
           ),
 // TODO-12: inside children array we will create a row(this row will have Radio and Text widget) using map() + toList() + Spread properties to create our radio button and Title text widget
           //done
