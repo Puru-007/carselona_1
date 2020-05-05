@@ -50,7 +50,7 @@ class LabeledRadio extends StatelessWidget {
 }
 
 class MyStatefulWidget extends StatefulWidget {
-  List<String> titles;
+  final List<String> titles;
 
   MyStatefulWidget({Key key, @required this.titles}) : super(key: key);
 

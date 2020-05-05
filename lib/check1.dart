@@ -382,7 +382,7 @@ void _createEstimationBottomSheet(BuildContext context) {
                             //removed
                             //TODO-17: Once above code(Padding) is deleted please call: customRadioGroup(gstRadioTitle)
 //                            customRadioGroup(gstRadioTitle),
-                          MyStatefulWidget1(titles: gstRadioTitle),
+                            MyStatefulWidget1(titles: gstRadioTitle),
 
                             FlatButton(
                               onPressed: null,

@@ -49,10 +49,12 @@ import 'package:carselona1/radioCheck.dart';
 //  }
 //}
 
+
 class MyStatefulWidget1 extends StatefulWidget {
 //  List<String> titles;
 
-  final List<String> titles;
+
+  final List titles;
   MyStatefulWidget1({Key key, @required this.titles}) : super(key: key);
 
 
@@ -63,6 +65,9 @@ class MyStatefulWidget1 extends StatefulWidget {
 class MyStatefulWidget1State extends State<MyStatefulWidget1> {
 
   List<String> radioTitle;
+  bool _isRadioSelected = false;
+  String _radioValue;
+
 
 
   Widget customRadioGroup(List<String> radioTitle){
@@ -73,14 +78,15 @@ class MyStatefulWidget1State extends State<MyStatefulWidget1> {
 
         children: radioTitle.map((titles) => Row(children: <Widget>[
 
+
           Radio(
             value: "$titles",
-            groupValue: "$titles",
-            onChanged: (value) {
+            groupValue: _radioValue,
+            onChanged: (val) {
               setState(() {
-
+                _radioValue = val;
               });
-            },
+            } ,
           ),
           Text(
             '$titles',
