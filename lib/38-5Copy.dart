@@ -1,34 +1,21 @@
-
-import 'package:carselona1/myRadio1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
 
+import 'myRadio1.dart';
 
-//import 'core/services/utils/ui_utils.dart';
 
-
-class Check1 extends StatefulWidget {
+class MyHomePageCopy extends StatefulWidget {
   @override
-  _CheckState createState() =>new  _CheckState();
+  _MyHomePageCopyState createState() =>new  _MyHomePageCopyState();
 }
 
-
-
-class _CheckState extends State<Check1> {
-// TODO-1: I hve deleted all(most of) the repeated code for issue list and for now we will focus on only bottom sheet.
-
-//TODO-2: Delete below _radio variables we don't need them because we will be creating radio button in method _createEstimationBottomSheet()
-//done
-
-//TODO-3: changes the variable name to "gstRadioTitle" this will be more understandable and by putting gst first we can easily access it.
-//done
+class _MyHomePageCopyState extends State<MyHomePageCopy> {
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0.0,
           // Here we take the value from the MyHomePage object that was created by
@@ -76,27 +63,98 @@ class _CheckState extends State<Check1> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            //TODO-4: remove below Container (only first container). As you have used Text('Engine', 'Battery', 'Clutch System'). which is not useful here because in this screen we will have Tabs for each part of Vehicle. We will work on it once bottom sheet is done
-            //removed
+            Container(
+              color: HexColor("#F4F6F9"),
+              height: 40,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Text(
+                    'Engine',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: HexColor("#000000"),
+                      fontSize: 12,
+                      fontFamily: 'ProximaNova-Regular',
+                    ),
+                  ),
+                  Text(
+                    'Battery',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: HexColor("#000000"),
+                      fontSize: 12,
+                      fontFamily: 'ProximaNova-Regular',
+                    ),
+                  ),
+                  Text(
+                    'Clutch System',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: HexColor("#000000"),
+                      fontSize: 12,
+                      fontFamily: 'ProximaNova-Regular',
+                    ),
+                  )
+                ],
+              ),
+            ),
 
             Container(
-              height: 50,
-              color: Colors.white,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              height: 400,
+              child: ListView (
                 children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(20, 0, 10, 0),
-                        child: Icon(
-                          Icons.lens,
-                          color: HexColor("#FF3C3C"),
-                          size: 10,),
+                  Container(
+                    height: 70,
+                    child: ListTile(
+                      contentPadding: EdgeInsets.fromLTRB(20, 0, 0, 30),
+                      leading: Icon(
+                        Icons.lens,
+                        color: HexColor("#FF3C3C"),
+                        size: 10,
                       ),
-                      Text(
+                      title: Text(
                         'Lorem ipsum dolor sit amet',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: HexColor("#000000"),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      trailing: MaterialButton (
+                        onPressed: () {
+                          _createEstimationBottomSheet(context);
+                        },
+                        shape: CircleBorder(),
+                        elevation: 0,
+                        highlightColor: HexColor("#637DDF"),
+                        color: Colors.grey[100],
+                        child: Icon(
+                          Icons.add,
+                          color: HexColor("#637DDF"),
+                        ),
+                      )
+                    ),
+                  ),
+                  Divider(
+                    height: 0,
+                    thickness: 1,
+                    endIndent: 20,
+                    indent: 20,
+                    color: HexColor("#E8EAED"),
+                  ),
+
+                  Container(
+                    height: 70,
+
+                    child: ListTile(
+                      contentPadding: EdgeInsets.fromLTRB(20, 8, 0, 0),
+                      leading: Icon(
+                        Icons.lens,
+                        color: HexColor("#FF3C3C"),
+                        size: 10,),
+                      title: Text(
+                        'Consectetur adipiscing',
                         textAlign: TextAlign.left,
                         style: TextStyle(
                           fontSize: 13,
@@ -104,30 +162,155 @@ class _CheckState extends State<Check1> {
                           fontWeight: FontWeight.w600,
                         ),
                       ),
-                    ],
-
-                  ),
-                  MaterialButton(
-                    onPressed: () {
-                      //TODO-5: I have removed your code of this function and placed in _createEstimationBottomSheet method so we can utilize this for other list item on "Add Button" tap.
-
-                      _createEstimationBottomSheet(context);
-                    },
-                    shape: CircleBorder(),
-                    elevation: 0,
-                    highlightColor: HexColor("#637DDF"),
-                    color: Colors.grey[100],
-                    child: Icon(
-                      Icons.add,
-                      color: HexColor("#637DDF"),
+                      trailing: MaterialButton(
+                        onPressed: () {
+                          _createEstimationBottomSheet(context);
+                        },
+                        shape: CircleBorder(),
+                        elevation: 0,
+                        highlightColor: HexColor("#637DDF"),
+                        color: Colors.grey[100],
+                        child: Icon(
+                          Icons.add,
+                          color: HexColor("#637DDF"),
+                        ),
+                      ),
                     ),
-                  )
+                  ),
+                  Divider(
+                    height: 0,
+                    thickness: 1,
+                    endIndent: 20,
+                    indent: 20,
+                    color: HexColor("#E8EAED"),
+                  ),
+
+                  Container(
+                    height: 70,
+                    child: ListTile(
+                      contentPadding: EdgeInsets.fromLTRB(20, 8, 0, 0),
+                      leading: Icon (
+                        Icons.lens,
+                        color:  HexColor("#FFA427"),
+                        size: 10,
+                      ),
+                      title: Text (
+                        'Lorem ipsum dolor sit amet',
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: HexColor("#000000"),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      trailing: MaterialButton(
+                        onPressed: () {
+                          _createEstimationBottomSheet(context);
+                        },
+                        shape: CircleBorder(),
+                        elevation: 0,
+                        highlightColor: HexColor("#637DDF"),
+                        color: Colors.grey[100],
+                        child: Icon(
+                          Icons.add,
+                          color: HexColor("#637DDF"),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    height: 0,
+                    thickness: 1,
+                    endIndent: 20,
+                    indent: 20,
+                    color: HexColor("#E8EAED"),
+                  ),
+
+                  Container(
+                    height: 70,
+                    child: ListTile(
+                      contentPadding: EdgeInsets.fromLTRB(20, 8, 0, 0),
+                      leading: Icon(
+                        Icons.lens,
+                        color: HexColor("#FFA427"),
+                        size: 10,
+                      ),
+                      title: Text(
+                        'Consectetur adipiscing',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: HexColor("#000000"),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      trailing: MaterialButton(
+                        onPressed: () {
+                          _createEstimationBottomSheet(context);
+                        },
+                        shape: CircleBorder(),
+                        elevation: 0,
+                        highlightColor: HexColor("#637DDF"),
+                        color: Colors.grey[100],
+                        child: Icon(
+                          Icons.add,
+                          color: HexColor("#637DDF"),
+                        ),
+                      ),
+
+                    ),
+                  ),
+                  Divider(
+                    height: 0,
+                    thickness: 1,
+                    endIndent: 20,
+                    indent: 20,
+                    color: HexColor("#E8EAED"),
+                  ),
+
+                  Container(
+                    height: 70,
+                    child: ListTile(
+                      contentPadding: EdgeInsets.fromLTRB(20, 8, 0, 0),
+                      leading: SizedBox(
+                        width: 4,
+                      ),
+                      title: Text(
+                        'Labour Cost',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 13,
+                          color: HexColor("#000000"),
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      trailing: MaterialButton(
+                        onPressed: () {
+                          _createEstimationBottomSheet(context);
+                        },
+                        shape: CircleBorder(),
+                        elevation: 0,
+                        highlightColor: HexColor("#637DDF"),
+                        color: Colors.grey[100],
+                        child: Icon(
+                          Icons.add,
+                          color: HexColor("#637DDF"),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Divider(
+                    height: 0,
+                    thickness: 1,
+                    endIndent: 20,
+                    indent: 20,
+                    color: HexColor("#E8EAED"),
+                  ),
+
                 ],
               ),
             ),
 
-            // TODO-6: Remove this Divider, we don't need this for now.
-            //removed
+
 
             Container(
               color: Colors.white,
@@ -191,7 +374,6 @@ class _CheckState extends State<Check1> {
   }
 }
 
-/// this function will be responsible for adding estimation to given issue
 void _createEstimationBottomSheet(BuildContext context) {
   // TODO-7: remove gstRadioTitle from above class and insert here as we are going to create radio button in this method.
   List<String> gstRadioTitle = [
@@ -463,33 +645,4 @@ void _createEstimationBottomSheet(BuildContext context) {
 //        );//TODO-20: remove ");" as we have already deleted "StatefulBuilder" above
       }
   );
-}
-
-
-//TODO-10: create method "customRadioGroup" which will accept list of string and will return widget. Below I have created sample which you can use(uncomment below code for use).
-Widget customRadioGroup(List<String> radioTitle){
-  return Container(
-    // TODO-11: create a row
-    //done
-    child: Row(
-      children: radioTitle.map((titles) => Row(children: <Widget>[
-
-        Radio(
-          value: "$titles",
-          groupValue: 0,
-          onChanged: (value) {
-
-          },
-        ),
-        Text(
-          '$titles',
-        ),
-// TODO-12: inside children array we will create a row(this row will have Radio and Text widget) using map() + toList() + Spread properties to create our radio button and Title text widget
-        //done
-        //TODO-13: Create Radio and Text Widget only once and set the text for Text Widget as "$title" and value, groupValue of Radio "$title".
-        //done
-      ])).toList(),
-    ),
-  );
-
 }

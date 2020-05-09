@@ -1,10 +1,12 @@
 import 'package:carselona1/38-5.dart';
+import 'package:carselona1/38-5Copy.dart';
 import 'package:carselona1/38-7.dart';
 import 'package:carselona1/check1.dart';
-import 'package:carselona1/radioCheck.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'AppSettigns.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: '38-7',
-      home: Check1(),
+      home: AppSettings(),
     );
   }
 }

@@ -1,9 +1,7 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_hex_color/flutter_hex_color.dart';
-import 'package:carselona1/radioCheck.dart';
 
 
 class LabeledRadio extends StatelessWidget {
@@ -13,8 +11,6 @@ class LabeledRadio extends StatelessWidget {
     this.groupValue,
     this.value,
     this.onChanged,
-
-
   });
 
   final String label;
@@ -22,7 +18,6 @@ class LabeledRadio extends StatelessWidget {
   final String groupValue;
   final String value;
   final Function onChanged;
-
 
   @override
   Widget build(BuildContext context) {
@@ -50,11 +45,7 @@ class LabeledRadio extends StatelessWidget {
   }
 }
 
-
 class MyStatefulWidget1 extends StatefulWidget {
-//  List<String> titles;
-
-
   final List titles;
   MyStatefulWidget1({Key key, @required this.titles}) : super(key: key);
 
@@ -64,22 +55,15 @@ class MyStatefulWidget1 extends StatefulWidget {
 }
 
 class MyStatefulWidget1State extends State<MyStatefulWidget1> {
-
   List<String> radioTitle;
-  bool _isRadioSelected = false;
   String _radioValue;
-
-
 
   Widget customRadioGroup(List<String> radioTitle){
     return Container(
       // TODO-11: create a row
       //done
       child: Row(
-
         children: radioTitle.map((titles) => Row(children: <Widget>[
-
-
           LabeledRadio(
             label: "$titles",
             value: "$titles",
@@ -104,6 +88,7 @@ class MyStatefulWidget1State extends State<MyStatefulWidget1> {
     );
 
   }
+
   @override
   Widget build(BuildContext context) {
     return customRadioGroup(widget.titles);
