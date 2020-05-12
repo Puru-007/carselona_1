@@ -41,11 +41,9 @@ class _ReviewEstimateState extends State<ReviewEstimate> {
           ],
         ),
       ),
-
       body: Padding(
         padding: const EdgeInsets.all(22.0),
         child: SingleChildScrollView(
-
           scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,17 +70,17 @@ class _ReviewEstimateState extends State<ReviewEstimate> {
                 ],
               ),
 
-            Container(
-              height: 26,
-              width: 165,
-              child: Text(
-                'BRT link road, opp new ashoka hotel, shri ram colony, pimple saudagar.',
-                style: TextStyle(
-                  color: HexColor("#6572A0"),
-                  fontSize: 10,
+              Container(
+                height: 26,
+                width: 165,
+                child: Text(
+                  'BRT link road, opp new ashoka hotel, shri ram colony, pimple saudagar.',
+                  style: TextStyle(
+                    color: HexColor("#6572A0"),
+                    fontSize: 10,
+                  ),
                 ),
               ),
-            ),
 
               SizedBox(
                 height: 15,
@@ -161,7 +159,7 @@ class _ReviewEstimateState extends State<ReviewEstimate> {
               ),
 
               Container(
-                height: 650,
+                height: 593,
                 width: 316,
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -172,6 +170,7 @@ class _ReviewEstimateState extends State<ReviewEstimate> {
                 ),
 
                 child: Column(
+
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
@@ -219,115 +218,269 @@ class _ReviewEstimateState extends State<ReviewEstimate> {
                         ],
                       ),
                     ),
-
                     Divider(
                       color: HexColor("#CED6E2"),
                       thickness: 1,
                     ),
 
-                    Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Column(
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Expanded(
-                                child: Text(
-                                  'Problem spot',
-                                  style: TextStyle(
-                                    color: HexColor("#6572A0"),
-                                    fontSize: 12,
+                    Column(
+                      children: <Widget>[
+                        ListTile(
+                            dense: true,
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(
+                                  width: 72,
+                                  child: Text(
+                                    'Problem spot',
+                                    style: TextStyle(
+                                      color: HexColor("#6572A0"),
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Text(
-                                  'Cost',
-                                  style: TextStyle(
-                                    color: HexColor("#6572A0"),
-                                    fontSize: 12,
+                                Container(
+                                  width: 36,
+                                  child: Text(
+                                    'Cost',
+                                    style: TextStyle(
+                                      color: HexColor("#6572A0"),
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Expanded(
-                                child: Text(
-                                  'GST',
-                                  style: TextStyle(
-                                    color: HexColor("#6572A0"),
-                                    fontSize: 12,
+                                Container(
+                                  width: 33,
+                                  child: Text(
+                                    'GST',
+                                    style: TextStyle(
+                                      color: HexColor("#6572A0"),
+                                      fontSize: 12,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(
-                                width: 40,
-                              ),
-                              Text(
-                                'Total',
-                                style: TextStyle(
-                                  color: HexColor("#6572A0"),
-                                  fontSize: 12,
+                                Container(
+                                  width: 60,
+                                  child: Text(
+                                    'Total',
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                      color: HexColor("#6572A0"),
+                                      fontSize: 12,
+                                    ),
+                                  ),
                                 ),
-                              ),
-                            ],
-                          ),
+                              ],
+                            )
+                        ),
 
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Estimates(
-                            problemName: 'Problem 1',
-                            problemDes: 'Lorem ipsum dolor',
-                            cost: '₹500.0',
-                            gst: '₹25.0',
-                            gstPer: '(5%)',
-                            total: '₹525.0',
-                          ),
+                        Estimates(
+                          problemName: 'Problem 1',
+                          problemDes: 'Lorem ipsum dolor',
+                          cost: '₹500.0',
+                          gst: '₹25.0',
+                          gstPer: '(5%)',
+                          total: '₹525.0',
+                        ),
+                        Estimates(
+                          problemName: 'Problem 2',
+                          problemDes: 'Lorem ipsum dolor sit amet',
+                          cost: '₹220.0',
+                          gst: '₹39.60',
+                          gstPer: '(18%)',
+                          total: '₹259.6',
+                        ),
+                        Estimates(
+                          problemName: 'Problem 3',
+                          problemDes: 'Lorem ipsum dolor',
+                          cost: '₹100.0',
+                          gst: '₹600.0',
+                          gstPer: '(20%)',
+                          total: '₹600.0',
+                        ),
+                        Estimates(
+                          problemName: 'Labour',
+                          problemDes: ' ',
+                          cost: '₹150.0',
+                          gst: '₹42.0',
+                          gstPer: '(28%)',
+                          total: '₹192.0',
+                        ),
 
-                          SizedBox(
-                            height: 20,
+                        Container(
+                          color: HexColor("#E2E7ED"),
+                          child: ListTile(
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(
+                                  width: 71,
+                                  child: Text(
+                                    'Old Estimate',
+//                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                      color: HexColor("#000000"),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 37,
+                                  child: Text(
+                                    '₹1370.0',
+                                    style: TextStyle(
+                                      color: HexColor("#000000"),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 36,
+                                  child: Text(
+                                    '₹206.6',
+                                    style: TextStyle(
+                                        color: HexColor("#000000"),
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w600
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 60,
+                                  child: Text(
+                                    '₹1576.60',
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                        color: HexColor("#000000"),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                          Estimates(
-                            problemName: 'Problem 2',
-                            problemDes: 'Lorem ipsum dolor',
-                            cost: '₹220.0',
-                            gst: '₹39.60',
-                            gstPer: '(18%)',
-                            total: '₹259.6',
-                          ),
+                        ),
 
-                          SizedBox(
-                            height: 20,
-                          ),
-                          Estimates(
-                            problemName: 'Problem 1',
-                            problemDes: 'Lorem',
-                            cost: '₹500.0',
-                            gst: '₹25.0',
-                            gstPer: '(5%)',
-                            total: '₹525.0',
-                          ),
+                        Estimates(
+                          problemName: 'Problem 2',
+                          problemDes: 'Lorem ipsum dolor sit amet',
+                          cost: '₹220.0',
+                          gst: '₹39.60',
+                          gstPer: '(18%)',
+                          total: '₹259.6',
+                        ),
+                        Estimates(
+                          problemName: 'Problem 3',
+                          problemDes: 'Lorem ipsum dolor',
+                          cost: '₹100.0',
+                          gst: '₹600.0',
+                          gstPer: '(20%)',
+                          total: '₹600.0',
+                        ),
+                        Estimates(
+                          problemName: 'Labour',
+                          problemDes: ' ',
+                          cost: '₹150.0',
+                          gst: '₹42.0',
+                          gstPer: '(28%)',
+                          total: '₹192.0',
+                        ),
 
-                          SizedBox(
-                            height: 20,
+                        Container(
+                          decoration: BoxDecoration(
+                            color: HexColor("#7E849E"),
+                            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(19.0), bottomRight: Radius.circular(19.0)),
+//                            borderRadius: BorderRadius.only( Radius.circular(20.0)),
                           ),
-                          Estimates(
-                            problemName: 'Problem 1',
-                            problemDes: 'Lorem',
-                            cost: '₹500.0',
-                            gst: '₹25.0',
-                            gstPer: '(5%)',
-                            total: '₹525.0',
+//                          color: HexColor("#E2E7ED"),
+                          child: ListTile(
+                            title: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Container(
+                                  width: 71,
+                                  child: Text(
+                                    'New estimate',
+//                                    textAlign: TextAlign.left,
+                                    style: TextStyle(
+                                      color: HexColor("#FFFFFF"),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 37,
+                                  child: Text(
+                                    '₹1370.0',
+                                    style: TextStyle(
+                                      color: HexColor("#FFFFFF"),
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 36,
+                                  child: Text(
+                                    '₹206.6',
+                                    style: TextStyle(
+                                        color: HexColor("#FFFFFF"),
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.w600
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: 60,
+                                  child: Text(
+                                    '₹2476.60',
+                                    textAlign: TextAlign.right,
+                                    style: TextStyle(
+                                        color: HexColor("#FFFFFF"),
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
+                        ),
 
-
-                        ],
-                      ),
+                      ],
                     )
                   ],
                 ),
 
-              )
+              ),
+
+              SizedBox(
+                height: 25,
+              ),
+
+              ButtonTheme(
+                minWidth: double.infinity,
+                height: 50,
+                child: FlatButton(
+                  onPressed: null,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                  disabledColor: HexColor("#587BFF"),
+                  child: Text(
+                    'Update and Send',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 13,
+                      fontWeight: FontWeight.w600,
+                      color: HexColor("#FFFFFF"),
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -336,7 +489,6 @@ class _ReviewEstimateState extends State<ReviewEstimate> {
   }
 
 }
-
 class Estimates extends StatelessWidget {
 
   const Estimates({
@@ -346,7 +498,7 @@ class Estimates extends StatelessWidget {
     this.gst,
     this.gstPer,
     this.total,
-});
+  });
   final String problemName;
   final String problemDes;
   final String cost;
@@ -357,72 +509,81 @@ class Estimates extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                problemName,
-                style: TextStyle(
-                  color: HexColor("#434A53"),
-                  fontSize: 10,
-                  fontWeight: FontWeight.w600,
+    return ListTile(
+      dense: true,
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Container(
+            width: 71,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  problemName,
+                  style: TextStyle(
+                    color: HexColor("#434A53"),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
-              ),
-              Text(
-                problemDes,
-                style: TextStyle(
-                  color: HexColor("#6572A0"),
-                  fontSize: 8,
-                ),
-              )
-            ],
-          ),
-        ),
-        Expanded(
-          child: Text(
-            cost,
-            style: TextStyle(
-              color: HexColor("#434A53"),
-              fontSize: 10,
-              fontWeight: FontWeight.w600
+                Text(
+                  problemDes,
+                  style: TextStyle(
+                    color: HexColor("#6572A0"),
+                    fontSize: 8,
+                  ),
+                )
+              ],
             ),
           ),
-        ),
-        Column(
-          children: <Widget>[
-            Text(
-              gst,
+          Container(
+            width: 36,
+            child: Text(
+              cost,
               style: TextStyle(
-                color: HexColor("#434A53"),
-                fontSize: 10,
+                  color: HexColor("#434A53"),
+                  fontSize: 10,
                   fontWeight: FontWeight.w600
               ),
             ),
-            Text(
-              gstPer,
+          ),
+          Container(
+            width: 33,
+            child: Column(
+              children: <Widget>[
+                Text(
+                  gst,
+                  style: TextStyle(
+                      color: HexColor("#434A53"),
+                      fontSize: 10,
+                      fontWeight: FontWeight.w600
+                  ),
+                ),
+                Text(
+                  gstPer,
+                  style: TextStyle(
+                    fontSize: 8,
+                    color: HexColor("#6572A0"),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            width: 60,
+            child: Text(
+              total,
+              textAlign: TextAlign.right,
               style: TextStyle(
-                fontSize: 8,
-                color: HexColor("#6572A0"),
+                  color: HexColor("#434A53"),
+                  fontSize: 10, fontWeight: FontWeight.w600
               ),
             ),
-          ],
-        ),
-        SizedBox(
-          width: 40,
-        ),
-        Text(
-          total,
-          style: TextStyle(
-            color: HexColor("#434A53"),
-            fontSize: 10, fontWeight: FontWeight.w600
           ),
-        ),
-      ],
+        ],
+      ),
     );
+
   }
 }
